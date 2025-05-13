@@ -1,0 +1,10 @@
+.ImgSelector{
+  display:grid;
+  grid-template-columns: auto auto auto;
+  grid-auto-rows: auto;
+  gap: 10px 10px;
+}
+
+.Selected {
+    border: 1px solid #ddd;
+}
