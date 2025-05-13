@@ -16,12 +16,12 @@ export function ImageSelector(props: any) {
 
     return (                
         <div id="photo-grid">
-            {imageURLS.map((url: string) => <img className={url === selectedImage ? "highlightImage" : "notSelected"} src={url} onClick={() => {handleClick(url)}}/>)}
+            {imageURLS.map((url: string, index: number) => <img key={index} className={url === selectedImage ? "highlightImage" : "notSelected"} src={url} onClick={() => {handleClick(url)}}/>)}
         </div>
     );
 }
 
-const brokenImages = [
+export const brokenImages = [
     1, 24, 32, 36, 44, 47
 ];
 

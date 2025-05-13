@@ -1,10 +1,10 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+//import reactLogo from './assets/react.svg'
+//import viteLogo from '/vite.svg'
 import './App.css'
-import {PhotoViewer} from './PhotoViewer/PhotoViewer.tsx'
-import {ImageSelector} from './PhotoViewer/ImageSelector.tsx'
-import {imageUrls} from './PhotoViewer/ImageSelector.tsx'
+import {PhotoViewer} from './PhotoViewer/PhotoViewer'
+import {ImageSelector} from './PhotoViewer/ImageSelector'
+import {imageUrls} from './PhotoViewer/ImageSelector'
 
 function App() {
 
