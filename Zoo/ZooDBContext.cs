@@ -9,8 +9,8 @@ public class ZooDBContext : DbContext
     public DbSet<Animal> Animals { get; set; }
     public DbSet<Zookeeper> Zookeepers { get; set; }
     public DbSet<Enclosure> Enclosures { get; set; }
-    protected readonly IConfiguration Configuration;
-    public string DbPath { get; }
+    protected readonly IConfiguration _Configuration;
+    
     /*
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,11 +34,11 @@ public class ZooDBContext : DbContext
 
     public ZooDBContext(IConfiguration configuration)
     {
-       Configuration = configuration;
+       _Configuration = configuration;
     }
     protected override void OnConfiguring(DbContextOptionsBuilder options)
     {
-        options.UseSqlite(Configuration.GetConnectionString("ZooDatabase"));
+        options.UseSqlite(_Configuration.GetConnectionString("ZooDatabase"));
     
         }
    
